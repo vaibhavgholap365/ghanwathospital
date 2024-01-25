@@ -361,5 +361,9 @@ button:hover {
     height: 400px;
     width: 900px;
 }
+@media (max-width: 908px) {
+    .content {
+      display: none;
+    }
 
 /* ***** Pharmacy  End ****** */
