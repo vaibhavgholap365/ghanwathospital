@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    cursor: pointer;
+    display: flex;
+    background: #EEF5FF;
+    /* background: #F3F8FF;
+         #4ADE80 shadow*/
+
+}
+
+.sidebar {
+    position: static;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    height: 150vh;
+    padding: 0 1.7rem;
+    columns: #fff;
+    /* transition:all 0.5s linear; */
+    /* background:  rgb(113, 99,186,255);    */
+    background: #fff;
+}
+
+/* .logo img{
+    height: 80px;
+    padding: 16px; */
+
+/* } */
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin-top: 100px;
+}
+
+.menu li {
+    display: flex;
+    padding: 1rem;
+    /* margin: 0px 0; */
+    border-radius: 8px;
+    gap: -10px;
+
+}
+
+.menu li:hover {
+    /* background:  #d4bdff; */
+    background: #ceb8fd;
+
+}
+
+.menu img {
+    height: 25px;
+    width: 25px;
+}
+
+.active {
+    background: #d5c3fc;
+    height: 20px;
+    width: 110px;
+    display: flex;
+}
+
+.menu a {
+    color: #333333;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-style: 1.2rem;
+}
+
+
+
+@media (max-width: 670px) {
+    .sidebar {
+      width: 189px;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
+
+
+
+/* *** main body section*** */
+.main--content {
+    position: relative;
+    background: #F1F5F9;
+    /* background:  #eef3fb; */
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 1rem;
+    margin-bottom: 1rem;
+    margin-left: -200px;
+    margin-top: -15px;
+
+}
+.header--title a{
+    text-decoration: none;
+    color: #8B5CF6;
+}
+
+.header--title {
+    /* color: #864AF9; */
+    color: #8B5CF6;
+    /* display: flex; */
+}
+
+.nav--item {
+    display: flex;
+    margin-right: 15px;
+    gap: 15px;
+}
+
+.nav--item img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    /* border-radius: 50%; */
+
+}
+
+
+
+.bed {
+    color: #7163BA;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+
+
+}
+
+
+/* .user--info{
+    display: flex;
+    align-items: center;
+    gap: 1;
+} */
+
+
+.search--box {
+    background: rgb(235, 235, 235);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    width: -10%;
+
+}
+
+.search--box input {
+    background: transparent;
+    padding: 10px;
+}
+
+.search--box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search--box i:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+/* *****Beds data Card container****** */
+
+
+.card--container {
+    background: #edf1f6;
+    padding: 2rem;
+    border-radius: 10px;
+    display: none;
+    cursor: pointer;
+
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.main--title {
+    color: rgba(113, 99, 186, 255);
+    padding-bottom: 10px;
+    font-size: 15px;
+
+}
+
+.bed--card {
+    height: 170px;
+    width: 200px;
+    border: 1.4px solid #d5c3fc;
+    border-radius: 20px;
+    background-color: #fff;
+  
+    
+    
+}
+
+.bed--card:hover {
+    transform: translateY(-5px);
+
+}
+.bed--card img{
+height: 30px;
+width: 30px;
+display: flex;
+align-items: end;
+margin-left: 10px;
+}
+
+.card--header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 5px; 
+}
+
+.bed-img img {
+    margin-top: 5px; 
+}
+
+
+.amount--value {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+
+}
+
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: rgb(233, 117, 117);
+}
+
+.card-details {
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+.bed--cards{
+    height: 120px;
+    width: 100px;
+    border: 1.3px solid #4ADE80;
+    border-radius: 4px;
+    background-color: #fff;
+    
+}
+.bed--cards:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ***** End Beds data ****** */
+
+
+/* ***** Registrstion Form ****** */
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.reg--form input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #b594fd;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #46b8fa;
+}
+
+
+
+
+/* ***** Registrstion Form End ****** */
+
+/* ***** Pharmacy Start ****** */
+
+.content img{
+    height: 400px;
+    width: 900px;
+}
+
+/* ***** Pharmacy  End ****** */
