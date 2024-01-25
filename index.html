@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- /* *****    SideBar    ****** */ -->
+
+    <div class="sidebar">
+
+        <ul class="menu">
+            <li onclick="f1('registration--item')" id="click" class="active">
+                <a href="#"><span>Registration</span></a>
+            </li>
+            <li onclick="f1('front--item')" id="click">
+                <a href="#"><img src="./assets/business.png" alt=""><span> Front Office
+                    </span></a>
+            </li>
+            <li onclick="f1('billing--item')" id="click">
+                <a href="#"><img src="./assets/biling.png" alt="">Biling</a>
+            </li>
+            <li onclick="f1('opd--item')" id="click">
+                <a href="#"><img src="./assets/stethoscope (2).png" alt="">OPD - Out Patient </a>
+            </li>
+            <li onclick="f1('ipd--item')" id="click">
+                <a href="#"><img src="./assets/patient.png" alt=""> IPD - In Patient </a>
+            </li>
+            <li onclick="f1('pharmacy--item')" id="click">
+                <a href="#"><img src="./assets/pills.png" alt="">Pharmacy </a>
+            </li>
+            <li onclick="f1('pathology--item')" id="click">
+                <a href="#"><img src="./assets/microscope (2).png" alt="">Pathology</a>
+            </li>
+            <li onclick="f1('radiology--item')" id="click">
+                <a href="#"><img src="./assets/ct-scan (2).png" alt=""> Radiology</a>
+            </li>
+            <li onclick="f1('hr--item')" id="click">
+                <a href="#"><img src="./assets/third-party.png" alt=""> Human Resource</a>
+            </li>
+            <li onclick="f1('')" id="click">
+                <a href="#"><img src="./assets/insurance (1).png" alt=""> TPA Management</a>
+            </li>
+            <li onclick="f1('')" id="click">
+                <a href="#"><img src="./assets/heart-rate.png" alt=""> Birth / Death Records</a>
+            </li>
+            <li onclick="f1('appointment--item')" id="click">
+                <a href="#"><img src="./assets/appointment.png" alt="">Appointment </a>
+            </li>
+            <li onclick="f1('')" id="click">
+                <a href="#"><img src="./assets/blood-type.png" alt=""> Blood Bank</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- /* *****    SideBar End  ****** */ -->
+
+
+
+    <div class="main--content">
+
+
+        <!-- /* *****  Header Nav-Bar   ****** */ -->
+
+
+
+
+        <div class="header--wrapper">
+            <div class="header--title"  >
+               <a href="index.html"> <h2>Ghanwat Multispeciality Hospital </h2></a>
+            </div>
+
+            <div class="nav--item">
+                 <div class="search--box">
+                    <i></i>
+                    <input type="text" placeholder="Search By Patient Name">
+                </div>
+                <ul class="bed" onclick="f1('notification--item')" id="click">
+                    <div class="bed"><img src="./assets/notification.png" alt=""></div>
+                </ul>
+                <ul class="bed" onclick="f1('bed--item')" id="click">
+                    <div class="bed"><img src="./assets/bed.png" alt=""> Bed Status</div>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- /* *****  Header Nav-Bar End   ****** */ -->
+
+
+
+        <!-- /* *****  Beds Data    ****** */ -->
+
+        <div class="card--container" id="bed--item">
+            <h3 class="main--title">Beds Data</h3><br>
+            <div class="card--wrapper">
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Total Beds</span>
+                            <h3>32</h3>
+                            <div class="bed-img"> <img src="./assets/bed-icon.png" alt=""></div>
+                            <span>Available</span>
+                            <h4>28</h4>
+                            <span>Occupied</span>
+                            <h4>04</h4>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">General Beds</span>
+                            <img src="./assets/bed-icon.png" alt="">
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Semi-Special Beds</span>
+                            <img src="./assets/bed-icon.png" alt="">
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Special Beds</span>
+                            <img src="./assets/bed-icon.png" alt="">
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br>
+
+
+            <div class="btn">General</div><br>
+            <!-- <div class="btn">Semi Special</div>
+            <div class="btn">Special</div> -->
+            <div class="card--wrapper">
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+
+           
+            <div class="btn">Semi Special</div><br>
+            <!-- <div class="btn">Special</div> -->
+            <div class="card--wrapper">
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+
+           
+            <div class="btn">Special</div><br>
+            <div class="card--wrapper">
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--cards">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Bed No.1</span>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="card--container">
+
+        </div>
+
+        <!-- /* *****  Beds Data End    ****** */ -->
+
+ <!-- /* *****  Notification   ****** */ -->
+
+ <div class="card--container" id="notification--item">
+    <h3 class="main--title">Notification</h3>
+    <div class="">
+        <div class="content">
+            <div class="card--header">
+                <div><img src="./assets/notification-img.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        <!-- /* *****  Registration Form   ****** */ -->
+
+
+        <div class="card--container" id="registration--item">
+            <h3 class="main--title">Registration Form</h3>
+            <div class="card--wrapper">
+                <form class="reg--form" action="">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- /* *****  Billing Data   ****** */ -->
+
+        <div class="card--container" id="billing--item">
+            <h3 class="main--title">Billing Data</h3>
+            <div class="card--wrapper">
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">OPD Billing</span>
+                            <div class="bed-img"> <img src="./assets/stethoscope (2).png" alt=""></div>
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">IPD Billing</span>
+                            <img src="./assets/patient.png" alt="">
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Pharmacy Billing</span>
+                            <img src="./assets/pills.png" alt="">
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bed--card">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Pathology Billing</span>
+                            <img src="./assets/microscope (2).png" alt="">
+                            <span class="amount--value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- /* *****  Pharmacy Data   ****** */ -->
+
+        <div class="card--container" id="pharmacy--item">
+            <h3 class="main--title">Pharmacy Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/Pharmacy.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /* ***** Opd Data   ****** */ -->
+
+        <div class="card--container" id="opd--item">
+            <h3 class="main--title">OPD Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/opd.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- /* *****  Ipd Data   ****** */ -->
+
+        <div class="card--container" id="ipd--item">
+            <h3 class="main--title">IPD Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/ipd.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /* *****  Pathology Data   ****** */ -->
+
+        <div class="card--container" id="pathology--item">
+            <h3 class="main--title">Pathology Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/pathology.png""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /* *****  Radiology Data   ****** */ -->
+
+        <div class="card--container" id="radiology--item">
+            <h3 class="main--title">Radiology Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/radiology.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /* *****  Human Resource Data   ****** */ -->
+
+        <div class="card--container" id="hr--item">
+            <h3 class="main--title">Human Resource Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/hr.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /* *****  Front Desk   ****** */ -->
+
+        <div class="card--container" id="front--item">
+            <h3 class="main--title">Front Desk Data</h3>
+            <div class="">
+                <div class="content">
+                    <div class="card--header">
+                        <div><img src="./assets/frontdesk.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        document.getElementById("bed--item").style.display = "block";
+        function f1(divId) {
+            document.querySelectorAll('.card--container').forEach(div => {
+                div.style.display = "none";
+            });
+            document.getElementById(divId).style.display = "block";
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
