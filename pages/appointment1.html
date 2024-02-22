@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/master.css">
+  
+  <title>Appointment Calendar</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .calendar-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calendar-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+    }
+
+    .day {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .appointment {
+
+      padding: 2px;
+      font-size: 0.8em;
+    }
+
+    /* Added styles for colorful calendar */
+    .day:nth-child(7n+1) {
+      background-color: #ffcccc;
+      /* Red */
+    }
+
+    .day:nth-child(7n+2) {
+      background-color: #ffeb99;
+      /* Orange */
+    }
+
+    .day:nth-child(7n+3) {
+      background-color: #ffff99;
+      /* Yellow */
+    }
+
+    .day:nth-child(7n+4) {
+      background-color: #99ff99;
+      /* Green */
+    }
+
+    .day:nth-child(7n+5) {
+      background-color: #99ccff;
+      /* Blue */
+    }
+
+    .day:nth-child(7n+6) {
+      background-color: #cc99ff;
+      /* Purple */
+    }
+
+    .day:nth-child(7n+7) {
+      background-color: #f07070;
+      /* Purple */
+    }
+
+
+    /* Button styles */
+    button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+ 
+
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <button id="prevYearBtn">Previous Year</button>
+      <button id="prevMonthBtn">Previous Month</button>
+      <h2 id="calendarMonthYear"></h2>
+      <button id="nextMonthBtn">Next Month</button>
+      <button id="nextYearBtn">Next Year</button>
+    </div>
+    <div id="calendar"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const calendar = document.getElementById("calendar");
+      const monthYearText = document.getElementById("calendarMonthYear");
+      const prevMonthBtn = document.getElementById("prevMonthBtn");
+      const nextMonthBtn = document.getElementById("nextMonthBtn");
+      const prevYearBtn = document.getElementById("prevYearBtn");
+      const nextYearBtn = document.getElementById("nextYearBtn");
+
+      let currentDate = new Date();
+      let currentMonth = currentDate.getMonth();
+      let currentYear = currentDate.getFullYear();
+
+      const appointmentsData = [
+        { date: new Date(currentYear, currentMonth, 5), name: "vrushali Gore", phone: "7387727562" },
+        { date: new Date(currentYear, currentMonth, 15), name: "shrawani Nilanage", phone: "8180453945" },
+        { date: new Date(currentYear, currentMonth, 6), name: "ved shintare", phone: "4518789852" },
+        { date: new Date(currentYear, currentMonth, 1), name: "vishal", phone: "4525368996" },
+        { date: new Date(currentYear, currentMonth, 5), name: "dyanshwar", phone: "74125896302" },
+        { date: new Date(currentYear, currentMonth, 25), name: "akshata", phone: "8180453945" }
+
+      ];
+
+      function renderCalendar() {
+        calendar.innerHTML = "";
+        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+        const firstDayIndex = new Date(currentYear, currentMonth, 1).getDay();
+
+        const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+        monthYearText.textContent = new Date(currentYear, currentMonth).toLocaleDateString("default", { month: "long", year: "numeric" });
+
+        // Add days of the week
+        daysOfWeek.forEach(day => {
+          const dayElement = document.createElement("div");
+          dayElement.classList.add("day");
+          dayElement.textContent = day;
+          calendar.appendChild(dayElement);
+        });
+
+        for (let i = 0; i < firstDayIndex; i++) {
+          const day = document.createElement("div");
+          day.classList.add("day");
+          calendar.appendChild(day);
+        }
+
+        for (let i = 1; i <= daysInMonth; i++) {
+          const day = document.createElement("div");
+          day.classList.add("day");
+          day.textContent = i;
+
+          // Fetch appointments for the current date
+          const appointments = getAppointmentsForDate(new Date(currentYear, currentMonth, i));
+
+          // Display appointments on the calendar
+          appointments.forEach(appointment => {
+            const appointmentElement = document.createElement("div");
+            appointmentElement.classList.add("appointment");
+            appointmentElement.textContent = appointment.name + " - " + appointment.phone;
+            day.appendChild(appointmentElement);
+          });
+
+          calendar.appendChild(day);
+        }
+      }
+
+      // Function to filter appointments for a specific date
+      function getAppointmentsForDate(date) {
+        return appointmentsData.filter(appointment => appointment.date.getTime() === date.getTime());
+      }
+
+      renderCalendar();
+
+      prevMonthBtn.addEventListener("click", () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentYear--;
+          currentMonth = 11;
+        }
+        renderCalendar();
+      });
+
+      nextMonthBtn.addEventListener("click", () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentYear++;
+          currentMonth = 0;
+        }
+        renderCalendar();
+      });
+
+      prevYearBtn.addEventListener("click", () => {
+        currentYear--;
+        renderCalendar();
+      });
+
+      nextYearBtn.addEventListener("click", () => {
+        currentYear++;
+        renderCalendar();
+      });
+    });
+  </script>
+</body>
+
+</html>
+ 

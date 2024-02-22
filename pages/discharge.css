@@ -1,0 +1,95 @@
+body {
+    padding: 10px;
+}
+
+.main1 {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 30%;
+}
+
+.profile {
+    margin-left: 80%; /* Adjust the margin for smaller screens */
+    margin-top: -40px;
+}
+
+.form-group .form-control {
+    display: block;
+    width: 100%; /* Adjust width for smaller screens */
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+div.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 40%;
+    margin-left: 10px; /* Adjust the margin for smaller screens */
+}
+
+h6 {
+    margin-left: 10px; /* Adjust the margin for smaller screens */
+}
+
+.radio-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.btn-container {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.btn {
+    padding: 10px 20px;
+    width: 200px;
+    margin: 0 10px; /* Add margin for better spacing between buttons */
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    background-color: #0d77e8;
+}
+
+.btn:hover {
+    background-color: #44afa6;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .main1 {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        height: auto; /* Allow content to determine height */
+    }
+
+    .profile {
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-top: 10px; /* Adjust the margin for smaller screens */
+    }
+
+    .form-group label,
+    h6 {
+        margin-left: 0; /* Reset margin for smaller screens */
+    }
+}

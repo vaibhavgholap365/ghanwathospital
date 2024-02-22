@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Doctor and Nurse Form</title>
+     <style>
+      
+      body {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin:50px;
+}
+.main1 {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 30%;
+
+}
+
+.toggle-btns{
+    display: flex;
+    justify-content: center;
+}
+div.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Additional style to reduce input type size and adjust position */
+input[type="date"],
+input[type="text"] {
+    font-size: 14px;
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+
+
+body {
+    padding: 10px;
+}
+
+.form-group .form-control {
+    display: block;
+    width: 40%;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+div.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 40%;
+    margin-left: 70px;
+}
+
+h6 {
+    margin-left: 50px;
+}
+
+.sub-div {
+    width: 80%;
+    margin-top: 20px;
+    margin-inline: 50px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.radio-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+button {
+    background-color: #0d77e8;
+    color: white;
+    cursor: pointer;
+}
+
+.container-btn {
+    margin-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.radio-container {
+    display: flex;
+    gap: 30px; /* Adjust the gap as needed */
+    margin-left: 20px;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin:50px;
+}
+.main1 {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 30%;
+
+}
+
+ 
+div.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Additional style to reduce input type size and adjust position */
+input[type="date"],
+input[type="text"] {
+    font-size: 14px;
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .form-group .form-control {
+        width: 100%;
+    }
+
+    div.form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .sub-div {
+        width: 100%;
+        margin-inline: 0;
+    }
+
+}
+
+ 
+     </style>
+</head>
+
+<body> 
+    <div class="main">
+        <div class="toggle-btns">
+            <button onclick="showDoctorForm()">Doctor</button>
+            <button onclick="showNurseForm()">Nurse</button>
+        </div>
+        <div id="doctorForm" style="display: none;">
+            <!-- Include your doctor form here -->
+     
+            <h2>Doctor Form</h2>
+            <form >
+                <!-- Doctor form content -->
+                <div class="sub-div">
+                    <div class="form-group">
+                        <label for="wardNo">Date:</label>
+                        <input type="date" class="form-control" id="wardNo" name="wardNo">
+                        
+                    </div>
+                </div>
+            
+            <div class="sub-div">
+                <div class="form-group">
+                    <label for="wardNo">time</label>
+                    <input type="time" class="form-control" id="wardNo" name="wardNo" >
+                   
+                </div>
+            </div>
+                    <div class="sub-div">
+                        <div class="form-group">
+                            <label for="wardNo">Diagnosis:</label>
+                            <input type="text" class="form-control" id="wardNo" name="wardNo">
+                            <button>+</button>
+                        </div>
+                    </div>
+                    <div class="sub-div">
+                        <div class="form-group">
+                            <label for="bedNo">Lab Test:</label>
+                            <input type="text" class="form-control" id="bedNo" name="bedNo">
+                            <button>+</button>
+                        </div>
+                    </div>
+                    <div class="sub-div">
+                        <div class="form-group">
+                            <label for="doctorName">Symptoms:</label>
+                            <input type="text" class="form-control" id="doctorName" name="doctorName">
+                            <button>+</button>
+                        </div>
+                    </div>
+                    <div class="sub-div">
+                        <div class="form-group">
+                            <label for="medicine">Medicine:</label>
+                            <input type="text" class="form-control" id="medicine" name="medicine">
+                            <button>+</button>
+                        </div>
+                    </div>
+                <div class="sub-div">
+                    <div class="form-group">
+                        <label for="wardNo">Remark:</label>
+                        <textarea rows="2" cols="30"></textarea>
+                    </div>
+                </div>
+        
+                    <div class="container-btn mt-3">
+                        <button class="btn btn-primary btn-block">
+                            <i class="fas fa-user"></i> Save Patient
+                        </button>
+                    </div>
+                </form>
+            </form>
+        </div>
+
+        <div id="nurseForm" style="display: none;">
+            <!-- Include your nurse form here -->
+           
+            <h2>Nurse Form</h2>
+            <form>
+                <!-- Nurse form content -->
+             
+                    <div class="sub-div">
+                        <div class="form-group">
+                            <label for="wardNo">Date:</label>
+                            <input type="date" class="form-control" id="wardNo" name="wardNo">
+                        </div>
+                 
+              
+                        <div class="form-group">
+                            <label for="wardNo">Time:</label>
+                            <input type="time" class="form-control" id="wardNo" name="wardNo" style="margin-left: 100px;">
+                        </div>
+                   
+              
+                        <div class="form-group">
+                            <label for="wardNo">madicine</label>
+                            <div class="radio-container">
+                                <input type="radio" name="allergies" value="yes"> Yes
+                                <input type="radio" name="allergies" value="no"> No
+                            </div>
+                    </div>
+        
+                    
+                        <div class="form-group">
+                            <label for="bedNo" > Latest Sample Collection:</label>
+                            <div class="radio-container">
+                                <input type="radio" name="allergies" value="yes"> Yes
+                                <input type="radio" name="allergies" value="no"> No
+                            </div>
+                    </div>
+        
+                   
+                        <div class="form-group">
+                            <label for="doctorName">Fever:</label>
+                            <input type="text" class="form-control" id="doctorName" name="doctorName">
+                       
+                    </div>
+        
+               
+                        <div class="form-group">
+                            <label for="medicine">BP:</label>
+                            <input type="text" class="form-control" id="medicine" name="medicine">
+                     
+                    </div>
+        
+                   
+                        <div class="form-group">
+                            <label for="wardNo">oxygen Level: </label>
+                            <input type="text" class="form-control" id="medicine" name="medicine">
+                     
+                    </div>
+        
+                    <div class="container-btn mt-3">
+                        <button class="btn btn-primary btn-block">
+                            Save 
+                        </button>
+                    </div>
+            
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showDoctorForm() {
+            document.getElementById('doctorForm').style.display = 'block';
+            document.getElementById('nurseForm').style.display = 'none';
+        }
+
+        function showNurseForm() {
+            document.getElementById('nurseForm').style.display = 'block';
+            document.getElementById('doctorForm').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

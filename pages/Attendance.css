@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.Datefield {
+   display: flex;
+   align-items: center;
+   gap: 5%;
+   margin-bottom: 1%;
+}
+.Remark{
+    border: 0.5px black solid;
+    outline: none;
+    border-radius: 2px;
+ 
+}
+.buttonclass{
+
+    display: flex;
+    justify-content: center;
+}

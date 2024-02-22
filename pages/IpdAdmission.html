@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="IpdAdmission.css"> -->
+    
+</head>
+
+<body>
+
+
+    <div class="mainDes">
+        <div class="container mt-3">
+            <div class="row button">
+                <div class="col-md-6">
+                        
+                    <button class="btn btn-secondary btn-block">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                     
+                </div>
+    
+            </div>
+        </div>
+      </div>
+      <br><br>
+    <div class="mainipdaddmission">
+
+        <form>
+            <h6 class="heddign-ipd">IPD Admission </h6>
+            <hr class="hrclass">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="prnno form-group formdiv">
+                        <label for="#"> Prn No </label>
+                        <input type="text" class="form-control prnfield" id="patientCode" name="patientCode">
+                    </div>
+
+                    <div class="bedno form-group formdiv">
+                        <label for="#"> Bed No </label>
+                        <button class="btn btn-secondary dropdown-toggle btntag" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Select
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Demo-1</a></li>
+                            <li><a class="dropdown-item" href="#">Demo-2</a></li>
+                            <li><a class="dropdown-item" href="#">Demo-3</a></li>
+                        </ul>
+                    </div>
+                    <div class="drname form-group formdiv">
+                        <label for="#"> Dr. Name </label>
+                        <button class="btn btn-secondary dropdown-toggle btntag" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Select
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Demo-1</a></li>
+                            <li><a class="dropdown-item" href="#">Demo-2</a></li>
+                            <li><a class="dropdown-item" href="#">Demo-3</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <br>
+
+
+                <div class="col-md-6">
+
+                    <div class="datdofadmission form-group formdiv">
+                        <label for="#"> Date Of Admission </label>
+                        <input type="date" class="form-control Datefield" id="patientCode" name="patientCode">
+                    </div>
+                    <div class="dignosis ">
+                        <div class="info">
+                            <label for="#" class="dignosislbl"> Diagnosis </label>
+                            <input type="text" class="form-control textfield" id="patientCode" name="patientCode">
+                            <button type="button" class="button btn-primary"> + </button>
+                        </div>
+                        <label for="#"> Demo-1 </label><br>
+                        <label for="#"> Demo-2 </label><br>
+                        <label for="#"> Demo-3 </label>
+
+                    </div>
+                    <div class="allergies form-group formdiv">
+                        <label for="#"> Allergies</label>
+                        <input type="radio" name="Allergiesfield" id="" checked>
+                        <label for="#"> Yes</label>
+                        <input type="radio" name="Allergiesfield" id="">
+                        <label for="#"> No </label>
+
+                    </div>
+                    <div class="aboutAllergies form-group formdiv">
+                        <label for="#"> About Allergies </label>
+                        <input type="text" class="form-control AboutAllergiesfield" id="patientCode" name="patientCode">
+                    </div>
+
+
+                    <br>
+
+                    <!-- ---------------------------- Save button------------------------------------ -->
+
+
+                    <div class="container mt-3">
+                        <div class="row button">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary btn-block btntag">
+                                    <i class="fas fa-user"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+        </form>
+    </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>

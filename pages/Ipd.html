@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPD</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="IpdOpd.css">
+</head>
+
+<body>
+  <div class="mainDes">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+              <div class="SearchBar">
+                <button type="button" class="aadbtn btn btn-primary add"><a href="?page=reg">Add Patient</a></button>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input type="text" class="search" placeholder="Search">
+                <button type="button" class="searchbtn btn btn-primary add">Search</button>
+              </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="container">
+    <div class="mainipd ">
+      
+
+      <div class="Patient_entry">
+
+        <table class="table table-striped Patient_entrytbl">
+          <thead>
+            <tr>
+              <th scope="col"> Sr No </th>
+              <th scope="col">Patient Name </th>
+              <th scope="col" class="opdipd">OPD/IPD</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>
+                <p class="patientName"> <a href="#">Vishal Nenavat</a></p>
+                <p class="patientName">DDD- PT/17/000126</p>
+                <p class="patientName"> 9045250012 </p>
+                <p class="patientName">-Pune</p>
+              </td>
+
+              <td>
+                <label for="#">10(OPD)7(ipd)</label>
+                <label for="#"> Bal-1200</label><br><br>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=IpdAdmission">Admission</a></button>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=#">IPD Bill</a></button>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=nurse">PT File</a></button>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=IpdCaseSheet">IPD Case Sheet</a></button>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=discharge">Discharge Sheet</a></button>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=AdvancePayment">Advance Payment</a></button>
+                <button type="button" class="btn btn-primary btns_"> <a href="?page=#">Refund</a></button>
+                
+
+                <select class="btns_" id="registrationType" name="registrationType">
+                  <option value="" disabled selected>Select City</option>
+                  <option value="mumbai">Mumbai</option>
+                  <option value="pune">Pune</option>
+                  <option value="nagpur">Nagpur</option>
+                  <option value="nashik">Nashik</option>
+                </select>
+
+              </td>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginationdiv">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

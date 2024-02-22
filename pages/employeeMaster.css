@@ -1,0 +1,80 @@
+body{
+    padding: 10px;
+}
+.main{
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 40px;
+}
+.main1{
+    width: 90%;
+    display: flex;
+   margin: auto;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   margin-top: 10px;
+    height: 40%;
+}
+.form-group .form-control{
+    display: block;
+    width: 60%;
+    font-size: 0.8rem;
+    border: 1px solid black;
+    height: 35px;
+    margin-right: 30px;
+    margin-top: 15px;
+    
+}
+
+div.form-group{
+    display: flex;
+    align-items: center;
+   
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+ 
+.form-group label{
+    width: 40%;
+   
+    font-size: 15px;
+    margin-left: 50px;
+}
+h6{
+    margin-left: 50px;
+  padding-top: 10px;
+    
+}
+.hr{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+    .btn-container {
+        text-align: center;
+        margin: auto;
+        display: flex;
+        
+        /* flex-direction: column; Display in column for small screens */
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        margin: 10px;
+        width: 200px;
+        
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+        background-color: #0d77e8 ;
+    }
+
+    .btn:hover {
+        background-color: #0d77e8;
+        color: rgb(240, 240, 240);
+    }
+
+ 
+ 

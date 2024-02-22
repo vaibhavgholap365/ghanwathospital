@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="opdbill.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <title>OPD Bill</title>
+</head>
+
+<body>
+    <div class="mainDes">
+        <div class="container mt-3">
+            <div class="row button">
+                <div class="col-md-12">
+                        
+                    <button class="btn btn-secondary btn-block">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                     
+                </div>
+    
+            </div>
+        </div>
+      </div>
+      <br><br>
+
+    <!-- -------------------------------personal detail---------------------------------------------------- -->
+    <div class="opd1">
+        <div class="container mt-3">
+            <div class="row button">
+                <h2>Ved Shintre</h2>
+                <P>23|male|Mobile:7888040638</P>
+    
+            </div>
+        </div>
+      </div>
+    <!-- <div class="pd">
+        <h2>Ved Shintre</h2>
+       <P>23|male|Mobile:7888040638</P>
+    </div> -->
+    
+    <form class="opd">
+        <div class="row">
+            <div class="col-md-6">
+                <h6>OPD Details</h6>
+                <hr>
+                <!-- Registration Type -->
+                <div class="form-group">
+                    <label for="Receipt No">Receipt No</label>
+                    <input type="text" name="Receipt No" id="Receipt No." class="form-control">
+                </div>
+
+                <!-- Patient Code/UHID -->
+                <div class="form-group">
+                    <label for="Bill Date.">Bill Date.</label>
+                    <input type="text" name="Bill Date." id="Bill Date." class="form-control">
+                </div>
+
+                <!-- Title -->
+                <div class="form-group">
+                    <label for="Doctor">Doctor</label>
+                    <select class="form-control" id="Doctor" name="Doctor">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Sharvani mam">Sharvani mam</option>
+                        <option value="Sharvani mam">Yash Sir</option>
+                    </select>
+                </div>
+
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="OPD Type">OPD Type</label>
+                    <select class="form-control" id="OPD Type" name="OPD Type">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Genral">Genral</option>
+                        <option value="Follow">Follow up</option>
+                    </select>
+                </div>
+
+                <!-- Marital Status -->
+                <div class="form-group">
+                    <label for="OPD-subType">OPD-subType</label>
+                    <select class="form-control" id="OPD-subType" name="OPD-subType">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Genral">Genral</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="OPD-subType">OPD-subType</label>
+                    <select class="form-control" id="Charge Type" name="Charge Type">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Genral">Genral</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </div>
+                <br>
+            </div>
+
+
+            <div class="col-md-6">
+                <h6>Billing Details</h6>
+                <hr>
+                <div class="form-group">
+                    <label for="Total">Total Amount</label>
+                    <input type="text" class="form-control" id="Total Amount" name="Total Amount">
+                </div>
+                <div class="form-group">
+                    <label for="Discount">Discount</label>
+                    <input type="text" class="form-control" id="Discount" name="Discount" placeholder="%">
+                    <input type="text" class="form-control" id="Discount" name="Discount">
+
+                </div>
+                <div class="form-group">
+                    <label for="patientCode">Payable Amount</label>
+                    <input type="text" class="form-control" id="Payable Amount" name="Payable Amount">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="Pay Mode">Pay Mode</label>
+                    <select class="form-control" id="Pay Mode" name="Pay Mode">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Cheque">Cheque</option>
+                        <option value="Card">Card</option>
+                        <option value="UPI">UPI</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="patientCode">Recived Amount</label>
+                    <input type="text" class="form-control" id="Recived Amount" name="Recived Amount">
+                </div>
+                <div class="form-group">
+                    <label for="patientCode">Balance Amount</label>
+                    <input type="text" class="form-control" id="Balance Amount" name="Balance Amount">
+                  
+                </div>
+                <br>
+
+            </div>
+
+            <div class="container mt-3">
+                <div class="row button">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary btn-block">
+                            <i class="fas fa-user"></i> Save 
+                        </button>
+                        <button class="btn btn-secondary btn-block">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                    </div>
+    
+                </div>
+            </div>
+
+    </form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
