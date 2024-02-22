@@ -2,561 +2,372 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Custom CSS -->
+<!--   
+  <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="pages/Ipd.css">
+   <link rel="stylesheet" href="pages/opd.css">
+  
+   <link rel="stylesheet" href="pages/LabTest.css">
+   <link rel="stylesheet" href="pages/DosageMaster.css">
+   <link rel="stylesheet" href="pages/AdvancePayment.css">
+   <link rel="stylesheet" href="pages/Designation.css">
+  <link rel="stylesheet" href="pages/appointment.css">
+<link rel="stylesheet" href="pages/OpdType.css">   
+<link rel="stylesheet" href="pages/prodCategory.css">
+<link rel="stylesheet" href="pages/IpdCaseSheet.css"> -->
+<!-- <link rel="stylesheet" href="pages/OtherHospital.css"> -->
+<link rel="stylesheet" href="./css/master.css">
+<link rel="stylesheet" href="./css/styles.css">
+
+
+
+  <style>
+    .submenu,
+    .submenu1 {
+      
+      display: none;
+    
+    }
+ 
+    li{
+      text-decoration: none;
+      list-style: none;
+      color: white;
+     
+    }
+    .sidebar-list-item.has-submenu.active .submenu,
+    .sidebar-list-item.has-submenu1.active .submenu1 {
+      display: block;
+    }
+    .a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      margin-top: 300px;
+      font-size: 16px;
+      
+    }
+    .sidebar-list-item {
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+a:hover{
+  color: black;
+}
+ 
+
+ .a:hover{
+  width: 30%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  background-color: white;
+
+ }
+  </style>
+</head> 
 
 <body>
+  <div class="grid-container">
 
+    <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined" style="color: white;">menu</span>
+      </div>
+      <div class="header-left">
+      </div>
+      <div class="header-rightx">
+        <span class="material-icons-outlined" style="color: white"></span>
+      </div>
+    </header>
+    <!-- End Header -->
 
-
-
-    <!-- /* *****    SideBar    ****** */ -->
-
-    <div class="sidebar">
-
-        <ul class="menu">
-            <li onclick="f1('registration--item')" id="click" class="active">
-                <a href="#"><span>Registration</span></a>
-            </li>
-            <li onclick="f1('front--item')" id="click">
-                <a href="#"><img src="./assets/business.png" alt=""><span> Front Office
-                    </span></a>
-            </li>
-            <li onclick="f1('billing--item')" id="click">
-                <a href="#"><img src="./assets/biling.png" alt="">Biling</a>
-            </li>
-            <li onclick="f1('opd--item')" id="click">
-                <a href="#"><img src="./assets/stethoscope (2).png" alt="">OPD - Out Patient </a>
-            </li>
-            <li onclick="f1('ipd--item')" id="click">
-                <a href="#"><img src="./assets/patient.png" alt=""> IPD - In Patient </a>
-            </li>
-            <li onclick="f1('pharmacy--item')" id="click">
-                <a href="#"><img src="./assets/pills.png" alt="">Pharmacy </a>
-            </li>
-            <li onclick="f1('pathology--item')" id="click">
-                <a href="#"><img src="./assets/microscope (2).png" alt="">Pathology</a>
-            </li>
-            <li onclick="f1('radiology--item')" id="click">
-                <a href="#"><img src="./assets/ct-scan (2).png" alt=""> Radiology</a>
-            </li>
-            <li onclick="f1('hr--item')" id="click">
-                <a href="#"><img src="./assets/third-party.png" alt=""> Human Resource</a>
-            </li>
-            <li onclick="f1('')" id="click">
-                <a href="#"><img src="./assets/insurance (1).png" alt=""> TPA Management</a>
-            </li>
-            <li onclick="f1('')" id="click">
-                <a href="#"><img src="./assets/heart-rate.png" alt=""> Birth / Death Records</a>
-            </li>
-            <li onclick="f1('appointment--item')" id="click">
-                <a href="#"><img src="./assets/appointment.png" alt="">Appointment </a>
-            </li>
-            <li onclick="f1('')" id="click">
-                <a href="#"><img src="./assets/blood-type.png" alt=""> Blood Bank</a>
-            </li>
-        </ul>
-    </div>
-
-
-    <!-- /* *****    SideBar End  ****** */ -->
-
-
-
-    <div class="main--content">
-
-
-        <!-- /* *****  Header Nav-Bar   ****** */ -->
-
-
-
-
-        <div class="header--wrapper">
-            <div class="header--title"  >
-               <a href="index.html"> <h2>Ghanwat Multispeciality Hospital </h2></a>
-            </div>
-
-            <div class="nav--item">
-                 <div class="search--box">
-                    <i></i>
-                    <input type="text" placeholder="Search By Patient Name">
-                </div>
-                <ul class="bed" onclick="f1('notification--item')" id="click">
-                    <div class="bed"><img src="./assets/notification.png" alt=""></div>
-                </ul>
-                <ul class="bed" onclick="f1('bed--item')" id="click">
-                    <div class="bed"><img src="./assets/bed.png" alt=""> Bed Status</div>
-                </ul>
-            </div>
-
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined"></span> Hospital
         </div>
+        <span class="material-icons-outlined" style="color: aliceblue;" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item view">
+          <a class="text-a" href="?page=Opd">
+            <span class="material-icons-outlined"></span> Home
+          </a>
+        </li>
+      
+        <li class="sidebar-list-item has-submenu">
+          <a href="#" class="masterbtn" onclick="toggleSubMenu('Master')">
+            <span class="material-icons-outlined"></span> Master
+          </a>
+          <ul id="Master" class="submenu">
+            
+            <li><a class="a text-a" href="?page=Designation">Designation</a></li>
+            <li><a class="a text-a" href="?page=employeeMaster">Employee</a></li>
+            <li><a class="a text-a" href="?page=OpdType">OPDType</a></li>
+            <li><a class="a text-a" href="?page=LabTest">Lab Test</a></li>
+            <li><a class="a text-a" href="?page=DosageMaster">Dosage</a></li>
+            <li><a class="a text-a" href="?page=prodCategory">Purchase product Catagory</a></li>
+            <li><a class="a text-a" href="?page=purchaseMaster">Purchase Product</a></li>
+            <li><a class="a text-a" href="?page=supplierMaster">Supplier</a></li>
+            <li><a class="a text-a" href="?page=IPDRoomType">IPD Room Type</a></li>
+            <li><a class="a text-a" href="?page=OtherHospital">Othere Hospital Facilities</a></li>
+          </ul>
+        </li>
+        <li class="sidebar-list-item view">
+          <a class="text-a" href="?page=appointment">
+            <span class="material-icons-outlined"></span> Appointment
+          </a>
+        </li>
+        <li class="sidebar-list-item view">
+          <a class="text-a" href="?page=Opd">
+            <span class="material-icons-outlined"></span> OPD
+          </a>
+        </li>
+
+        <li class="sidebar-list-item view">
+          <a class="text-a" href="?page=Ipd">
+            <span class="material-icons-outlined"></span>  IPD
+          </a>
+        </li>
+        <li class="sidebar-list-item has-submenu">
+          <a href="#" onclick="toggleSubMenu('report')">
+            <span  class="material-icons-outlined"></span> Reports
+          </a>
+          <ul id="report" class="submenu">
+            <li><a class="a text-a" href="?page=opd_report">OPD Report</a></li>
+            <li><a class="a text-a" href="?page=inventoryReport">IPD Report</a></li>
+            <li><a class="a text-a" href="?page=BillReport">Billing</a></li>
+
+            <li><a class="a text-a"href="?page=inventoryReport">Purchase Report</a></li>
+
+            <li><a class="a text-a" href="?page=#">Stock Report</a></li>
+
+          </ul>
+        </li>
 
 
-        <!-- /* *****  Header Nav-Bar End   ****** */ -->
+        <li class="sidebar-list-item has-submenu">
+          <a href="#" onclick="toggleSubMenu('Salary')">
+            <span class="material-icons-outlined"></span>  Salary
+          </a>
+          <ul id="Salary" class="submenu">
+            <li><a class="a text-a" href="?page=SalaryDetails">Salary </a></li>
+            <li><a class="a text-a" href="?page=AdvancePayment">Salary Advance</a></li>
+            <li><a class="a text-a" href="?page=Attendance">Attendance</a></li> 
+             
+          </ul>
+        </li>
 
+        <li class="sidebar-list-item has-submenu" >
+          <a href="#" onclick="toggleSubMenu('Set')">
+            <span class="material-icons-outlined"></span>  Setting
+          </a>
+          <ul id="Set" class="submenu">
+            <li><a class="a text-a" href="#">Create User</a> </li>
+            <li><a class="a text-a" href="?page=#">User Permission</a></li>
+          </ul>
+        </li>
 
+        
+      </ul>
+    </aside>
+    <!-- End Sidebar -->
 
-        <!-- /* *****  Beds Data    ****** */ -->
+    <main class="main-container" id="mainContent">
 
-        <div class="card--container" id="bed--item">
-            <h3 class="main--title">Beds Data</h3><br>
-            <div class="card--wrapper">
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Total Beds</span>
-                            <h3>32</h3>
-                            <div class="bed-img"> <img src="./assets/bed-icon.png" alt=""></div>
-                            <span>Available</span>
-                            <h4>28</h4>
-                            <span>Occupied</span>
-                            <h4>04</h4>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
+      <div class="mainDes">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="SearchBar">
+                    <button type="button" class="aadbtn btn btn-primary add"><a href="?page=reg">Add Patient</a></button>
+                    
+                  </div>
                 </div>
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">General Beds</span>
-                            <img src="./assets/bed-icon.png" alt="">
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                  <div>
+                    <input type="text" class="search" placeholder="Search">
+                    <button type="button" class="searchbtn btn btn-primary add">Search</button>
+                  </div>
                 </div>
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Semi-Special Beds</span>
-                            <img src="./assets/bed-icon.png" alt="">
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Special Beds</span>
-                            <img src="./assets/bed-icon.png" alt="">
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-            </div><br><br><br>
-
-
-            <div class="btn">General</div><br>
-            <!-- <div class="btn">Semi Special</div>
-            <div class="btn">Special</div> -->
-            <div class="card--wrapper">
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-            </div><br><br>
-
-           
-            <div class="btn">Semi Special</div><br>
-            <!-- <div class="btn">Special</div> -->
-            <div class="card--wrapper">
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-            </div><br><br>
-
-           
-            <div class="btn">Special</div><br>
-            <div class="card--wrapper">
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--cards">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Bed No.1</span>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="card--container">
-
-        </div>
-
-        <!-- /* *****  Beds Data End    ****** */ -->
-
- <!-- /* *****  Notification   ****** */ -->
-
- <div class="card--container" id="notification--item">
-    <h3 class="main--title">Notification</h3>
-    <div class="">
-        <div class="content">
-            <div class="card--header">
-                <div><img src="./assets/notification-img.png" alt=""></div>
+    
             </div>
         </div>
-    </div>
-</div>
+      </div>
+      <br><br>
 
 
-
-
-        <!-- /* *****  Registration Form   ****** */ -->
-
-
-        <div class="card--container" id="registration--item">
-            <h3 class="main--title">Registration Form</h3>
-            <div class="card--wrapper">
-                <form class="reg--form" action="">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" required>
-
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
+      <div class="container">
+        <div class="mainopd">
+          
+          </div>
+    
+          <div class="Patient_entry">
+    
+            <table class="table table-striped Patient_entrytbl">
+              <thead>
+                <tr>
+                  <th scope="col"> Sr No </th>
+                  <th scope="col">Patient Name </th>
+                  <th scope="col" class="opdipd">OPD/IPD</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <p class="patientName"> <a href="#">Vishal Nenavat</a></p>
+                    <p class="patientName">DDD- PT/17/000126</p>
+                    <p class="patientName"> 9045250012 </p>
+                    <p class="patientName">-Pune</p>
+                  </td>
+    
+                  <td>
+                    <label for="#">10(OPD)7(ipd)</label>
+                    <label for="#"> Bal-1200</label><br><br>
+                    <button type="button" class="btn btn-primary btns_"> <a href="?page=opdbill">OPD Bill</a></button>
+                    <button type="button" class="btn btn-primary btns_">  <a href="?page=priscription">Prescription</a></button>
+    
+    
+                    <select class="btns_" id="registrationType" name="registrationType">
+                      <option value="" disabled selected>Select City</option>
+                      <option value="mumbai">Mumbai</option>
+                      <option value="pune">Pune</option>
+                      <option value="nagpur">Nagpur</option>
+                      <option value="nashik">Nashik</option>
                     </select>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address" rows="4" required></textarea>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+    
+                  </td>
+    
+              </tbody>
+            </table>
+          </div>
+          <div class="paginationdiv">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+    
+      </div>
+    </main>
+    <!-- End Main -->
 
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+  <!-- Scripts -->
+  <!-- ApexCharts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+  <script>
+    
 
+    // Function to load dynamic content based on URL parameters
+    function loadContent() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var pageName = urlParams.get('page');
 
-        <!-- /* *****  Billing Data   ****** */ -->
+      if (pageName) {
+        // Load content dynamically based on the 'page' parameter
+        var contentUrl = 'pages/' + pageName + '.html'; // Assuming pages are stored in a 'pages' directory
+        fetch(contentUrl)
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('mainContent').innerHTML = html;
+          })
+          .catch(error => console.error('Error loading content:', error));
+      }
+    }
 
-        <div class="card--container" id="billing--item">
-            <h3 class="main--title">Billing Data</h3>
-            <div class="card--wrapper">
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">OPD Billing</span>
-                            <div class="bed-img"> <img src="./assets/stethoscope (2).png" alt=""></div>
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">IPD Billing</span>
-                            <img src="./assets/patient.png" alt="">
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Pharmacy Billing</span>
-                            <img src="./assets/pills.png" alt="">
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bed--card">
-                    <div class="card--header">
-                        <div class="amount">
-                            <span class="title">Pathology Billing</span>
-                            <img src="./assets/microscope (2).png" alt="">
-                            <span class="amount--value"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <!-- /* *****  Pharmacy Data   ****** */ -->
-
-        <div class="card--container" id="pharmacy--item">
-            <h3 class="main--title">Pharmacy Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/Pharmacy.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- /* ***** Opd Data   ****** */ -->
-
-        <div class="card--container" id="opd--item">
-            <h3 class="main--title">OPD Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/opd.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- /* *****  Ipd Data   ****** */ -->
-
-        <div class="card--container" id="ipd--item">
-            <h3 class="main--title">IPD Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/ipd.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /* *****  Pathology Data   ****** */ -->
-
-        <div class="card--container" id="pathology--item">
-            <h3 class="main--title">Pathology Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/pathology.png""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /* *****  Radiology Data   ****** */ -->
-
-        <div class="card--container" id="radiology--item">
-            <h3 class="main--title">Radiology Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/radiology.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /* *****  Human Resource Data   ****** */ -->
-
-        <div class="card--container" id="hr--item">
-            <h3 class="main--title">Human Resource Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/hr.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- /* *****  Front Desk   ****** */ -->
-
-        <div class="card--container" id="front--item">
-            <h3 class="main--title">Front Desk Data</h3>
-            <div class="">
-                <div class="content">
-                    <div class="card--header">
-                        <div><img src="./assets/frontdesk.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-    </div>
-
-
-    <script>
-        document.getElementById("bed--item").style.display = "block";
-        function f1(divId) {
-            document.querySelectorAll('.card--container').forEach(div => {
-                div.style.display = "none";
-            });
-            document.getElementById(divId).style.display = "block";
-
-        }
-
-
-
-    </script>
-
-
+    // Call the loadContent function when the page loads
+    window.addEventListener('load', loadContent);
+  </script>
 </body>
 
 </html>
+<script>
+ 
+ function toggleSubMenu(submenuId) {
+    var submenu = document.getElementById(submenuId);
+    var parentListItem = submenu.parentElement;
+
+    // Close all other submenus
+    var allSubmenus = document.querySelectorAll('.submenu');
+    allSubmenus.forEach(function (item) {
+      if (item.id !== submenuId) {
+        item.style.display = 'none';
+      }
+    });
+
+    // Toggle the 'active' class to show/hide the clicked submenu
+    parentListItem.classList.toggle('active');
+    submenu.style.display = (submenu.style.display === 'none' || submenu.style.display === '') ? 'block' : 'none';
+    
+  }
+
+  function toggleSubMenu1(submenuId1) {
+    var submenu1 = document.getElementById(submenuId1);
+    var parentListItem = submenu1.parentElement;
+
+    // Close all other submenus
+    var allSubmenus = document.querySelectorAll('.submenu1');
+    allSubmenus.forEach(function (item) {
+      if (item.id !== submenuId1) {
+        item.style.display = 'none';
+      }
+    });
+
+    // Toggle the 'active' class to show/hide the clicked submenu
+    parentListItem.classList.toggle('active');
+    submenu1.style.display = (submenu1.style.display === 'none' || submenu1.style.display === '') ? 'block' : 'none';
+  }
+
+ 
+</script>
+<script>
+  function showDoctorForm() {
+      document.getElementById('doctorForm').style.display = 'block';
+      document.getElementById('nurseForm').style.display = 'none';
+  }
+
+  function showNurseForm() {
+      document.getElementById('nurseForm').style.display = 'block';
+      document.getElementById('doctorForm').style.display = 'none';
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
