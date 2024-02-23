@@ -8,6 +8,7 @@
 }
 
 body {
+    
     cursor: pointer;
     display: flex;
     background: #EEF5FF;
@@ -24,10 +25,7 @@ body {
     width: 240px;
     height: 150vh;
     padding: 0 1.7rem;
-    columns: #fff;
-    /* transition:all 0.5s linear; */
-    /* background:  rgb(113, 99,186,255);    */
-    background: #fff;
+    background: #d1cece;
 }
 
 /* .logo img{
@@ -36,16 +34,17 @@ body {
 
 /* } */
 .menu {
+    margin-top: 80px;
     height: 88%;
-    position: relative;
+    /* position: relative; */
     list-style: none;
     padding: 0;
-    margin-top: 100px;
+    
 }
 
 .menu li {
     display: flex;
-    padding: 1rem;
+    padding: 0.8rem;
     /* margin: 0px 0; */
     border-radius: 8px;
     gap: -10px;
@@ -53,7 +52,7 @@ body {
 }
 
 .menu li:hover {
-    /* background:  #d4bdff; */
+    height: 40px;
     background: #ceb8fd;
 
 }
@@ -64,10 +63,11 @@ body {
 }
 
 .active {
-    background: #d5c3fc;
-    height: 20px;
-    width: 110px;
+    background: #edf1f6;
+    height: 38px;
+    width: 100%;
     display: flex;
+    margin-bottom: 3px;
 }
 
 .menu a {
@@ -90,21 +90,81 @@ body {
 
 
 
-@media (max-width: 670px) {
-    .sidebar {
-      width: 189px;
+.sidebar .fa-solid{
+    display: none;
+}
+
+
+
+
+
+ 
+
+
+/* @media (max-width: 600px) {
+    .sidebar .fa-solid{
+        display: block;
+        font-size: 30px;
     }
-  
-    .navbar ul {
-      display: none;
-    }
+    
+    .sidebar ul .fa-solid{
+
+        position: absolute;
+        top: 125px;
+        left: 140px;
+        }
+        #bar{
+            margin-top: -1200px;
+  } */
+
+
+  /* .sidebar ul {
+   position: absolute;
+    padding-top: 50px;
+    margin-left: -200px;
+}
+.header--wrapper{
+    display: flex;
+    justify-content: center;
+    margin-left: 300px;
+}
+body{
+    display:flex ;
+} */
+
+
+
+
+/* 
+
+
+  @media (max-width: 944px) {
+  .nav--item{
+    padding: 10px;
+  }
+  .card--container{
+    margin-top: 50px;
+    
+  }
+  .header--wrapper{
+    display: flex;
+    justify-content: none;
+  }
+  .sidebar {
+    width: 200px;
+   margin-left: 0;
+   margin-top: 118px;
+  }
+  .menu{
+      margin-top: 10px;
   }
 
+} */
 
 
 /* *** main body section*** */
 .main--content {
-    position: relative;
+    /* position: relative; */
     background: #F1F5F9;
     /* background:  #eef3fb; */
     width: 100%;
@@ -112,6 +172,7 @@ body {
 }
 
 .header--wrapper {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,8 +181,9 @@ body {
     border-radius: 10px;
     padding: 12px 1rem;
     margin-bottom: 1rem;
-    margin-left: -200px;
+    margin-left: -150px;
     margin-top: -15px;
+    width: 90%;
 
 }
 .header--title a{
@@ -322,16 +384,26 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.row-1{
+    display: flex;
+   gap: 8px;
+    padding: 8px;
+    
+}
 
 label {
     display: block;
     margin-bottom: 8px;
+    margin-left: 20px;
+}
+.title{
+    padding: 20px;
 }
 
-.reg--form input, select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
+.reg--form input,textarea, select {
+    width: 30%;
+    padding: 6px;
+    margin-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -361,9 +433,15 @@ button:hover {
     height: 400px;
     width: 900px;
 }
+
 @media (max-width: 908px) {
     .content {
       display: none;
     }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
 
 /* ***** Pharmacy  End ****** */
