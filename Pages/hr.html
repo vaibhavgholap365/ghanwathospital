@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Project</title>
+    <link rel="stylesheet" href="hr.css">
+</head>
+<body>
+    <section class="main">
+        <div class="main-top">
+            
+        
+        </div>
+
+        <section class="attendance">
+            <div class="attendance-list">
+                <h1>Attendance List</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Depart</th>
+                            <th>Date</th>
+                            <th>Join Time</th>
+                            <th>Logout Time</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Sam David</td>
+                            <td>Design</td>
+                            <td>03-24-22</td>
+                            <td>8:00AM</td>
+                            <td>3:00PM</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr class="active">
+                            <td>02</td>
+                            <td>Balbina Kherr</td>
+                            <td>Coding</td>
+                            <td>03-24-22</td>
+                            <td>9:00AM</td>
+                            <td>4:00PM</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Badan John</td>
+                            <td>testing</td>
+                            <td>03-24-22</td>
+                            <td>8:00AM</td>
+                            <td>3:00PM</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Sara David</td>
+                            <td>Design</td>
+                            <td>03-24-22</td>
+                            <td>8:00AM</td>
+                            <td>3:00PM</td>
+                            <td><button>View</button></td>
+                        </tr>
+                        <!-- <tr > -->
+                        <td>05</td>
+                        <td>Salina</td>
+                        <td>Coding</td>
+                        <td>03-24-22</td>
+                        <td>9:00AM</td>
+                        <td>4:00PM</td>
+                        <td><button>View</button></td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>Tara Smith</td>
+                            <td>Testing</td>
+                            <td>03-24-22</td>
+                            <td>9:00AM</td>
+                            <td>4:00PM</td>
+                            <td><button>View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+    <style>
+        
+  
+  /*Attendance List serction  */
+  .attendance {
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  
+  .attendance-list {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  table thead tr {
+    color: #8b56f6;
+    background: #ded2fa;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 15px;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table tbody tr:nth-of-type(odd) {
+    background: #f3f3f3;
+  }
+  
+  .table tbody tr.active {
+    /* font-weight: bold; */
+    
+  }
+  
+  .table tbody tr:last-of-type {
+    border-bottom: 2px solid #ceb8fd;
+  }
+  
+  .table button {
+    padding: 6px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ceb8fd;
+    border: 1px solid #8b56f6;
+  }
+  
+  .table button:hover {
+    background: #8b56f6;
+    /* color: #fff; */
+    transition: 0.5rem;
+  }
+    </style>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/html2pdf.js"></script>
+
+    <link rel="stylesheet" href="pages/billing.css">
+    <title>Hospital Project</title>
+</head>
+
+<body>
+
+    <div class="container1">
+        <div class="profile">
+            <h3>Patients Billing</h3>
+            <h5></h5>
+        </div>
+        <!-- <h2>OPD and Billing Details Form</h2> -->
+        <div class="form-container">
+           
+            <div class="right-side">
+                <h3>Billing Details</h3>
+
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="totalAmount">Registration Number:</label>
+                    </div>
+                    <input type="number" id="totalAmount" name="totalAmount" required
+                        oninput="calculatePayableAmount()">
+                </div>
+
+
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="totalAmount">Total Amount:</label>
+                    </div>
+                    <input type="number" id="totalAmount" name="totalAmount" required
+                        oninput="calculatePayableAmount()">
+                </div>
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="discountType">Discount Type :</label>
+                    </div>
+                    <select id="discountType" name="discountType" required>
+                        <option value="percentage">Percentage</option>
+                        <option value="inr">INR</option>
+                    </select>
+                </div>
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="discount">Discount:</label>
+                    </div>
+                    <input type="number" id="discount" name="discount" required oninput="calculatePayableAmount()">
+                </div>
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="payableAmount">Payable Amount:</label>
+                    </div>
+                    <input type="number" id="payableAmount" name="payableAmount" required readonly>
+                </div>
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="paymentMode">Payment Mode:</label>
+                    </div>
+                    <select id="paymentMode" name="paymentMode" required>
+                        <option value="cash">Cash</option>
+                        <option value="card">Card</option>
+                        <option value="upi">UPI</option>
+                        <!-- Add more payment mode options as needed -->
+                    </select>
+                </div>
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="receivedAmount">Received Amount:</label>
+                    </div>
+                    <input type="number" id="receivedAmount" name="receivedAmount" required
+                        oninput="calculateBalance()">
+                </div>
+                <div class="lab">
+                    <div class="lab11">
+                        <label for="balanceAmount">Balance Amount:</label>
+                    </div>
+                    <input type="number" id="balanceAmount" name="balanceAmount" required readonly>
+                </div>
+
+                <!-- ... (Your existing form code) ... -->
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <div class="btn" onclick="saveForm()">Save</div>
+            <div class="btn" onclick="goHome()">Home</div>
+            <div class="btn" onclick="downloadAsPDF()">Download PDF</div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // JavaScript function to calculate payable amount
+        function calculatePayableAmount() {
+            var totalAmount = parseFloat(document.getElementById('totalAmount').value) || 0;
+            var discountType = document.getElementById('discountType').value;
+            var discount = parseFloat(document.getElementById('discount').value) || 0;
+
+            var payableAmount;
+
+            if (discountType === 'percentage') {
+                payableAmount = totalAmount - (totalAmount * (discount / 100));
+            } else if (discountType === 'inr') {
+                payableAmount = totalAmount - discount;
+            } else {
+                payableAmount = totalAmount;
+            }
+
+            document.getElementById('payableAmount').value = payableAmount.toFixed(2);
+        }
+
+        // JavaScript function to calculate balance amount
+        function calculateBalance() {
+            var payableAmount = parseFloat(document.getElementById('payableAmount').value) || 0;
+            var receivedAmount = parseFloat(document.getElementById('receivedAmount').value) || 0;
+
+            var balanceAmount = receivedAmount - payableAmount;
+            document.getElementById('balanceAmount').value = balanceAmount.toFixed(2);
+        }
+
+        // JavaScript functions for button actions
+        function saveForm() {
+            // Implement the save functionality here
+            alert("Form saved!");
+        }
+
+        function goHome() {
+            // Implement the home redirection or action here
+            alert("Redirecting to home page!");
+        }
+
+        // Initial calculation on page load
+        window.onload = function () {
+            calculatePayableAmount();
+        };
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
