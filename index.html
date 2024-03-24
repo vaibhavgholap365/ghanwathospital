@@ -65,7 +65,7 @@
             </div>
             <div class="intro-p">
                 <div class="canvas-logo">
-                    <img src="../assets/loginLogo.png" alt="logo">
+                    <img src="./assets/loginLogo.png" alt="logo">
                 </div>
 
                 <div class="intro-content">
@@ -96,7 +96,7 @@
             if (email === predefinedEmail && password === predefinedPassword) {
                 localStorage.setItem("login", JSON.stringify({ login: true }))
                 // Redirect to index.html using relative path
-                window.location.href = "pages/home.html";
+                window.location.href = "./pages/home.html";
             } else {
                 alert("Invalid email or password. Please try again.");
             }
