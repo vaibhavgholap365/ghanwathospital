@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Patient Database</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="../pages/registration.css"> -->
+</head>
+
+<body>
+
+  <div class="main">
+    <h3>Patient Registration</h3>
+    <div class="container1">
+     
+      <div class="logo-text">
+        <!-- Logo text with different styles -->
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="patientName"> <i class="fas fa-user"> </i> Patient Name :-</label>
+          <input type="text" id="patientName" placeholder=" Enter Patient Name">
+        </div>
+        <div class="form-group">
+          <label for=""><i class="fas fa-id-card"></i> Gender :-</label>
+          <input type="text" id="" required placeholder="Select gender">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="contactDetails"><i class="fas fa-phone"></i> Primary Contact Details:</label>
+          <input type="text" id="contactDetails" required placeholder="Enter Mobile Number"><br><br>
+        </div>
+
+        <div class="form-group">
+          <label for="contactDetails"><i class="fas fa-phone"></i> Secondary Contact Details:</label>
+          <input type="text" id="contactDetails" placeholder="Enter Mobile Number">
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="form-group">
+          <label for=""><i class="fas fa-id-card"></i> Valid Id Proof :- </label>
+          <input type="text" id="" required placeholder="Select valid Id Proof">
+        </div>
+      </div>
+      <div class="row1">
+        <div class="form-group">
+          <label for=""><i class="fas fa-id-card"></i> Address :- </label>
+          <input type="text" id="" required placeholder="Ex: house/flat number, floor number, street, area, etc.">
+        </div>
+      </div>
+
+      <div class="row1">
+        <div class="form-group">
+          <button class="btn" onclick="generatePrescription()"></i> Cancel</button>
+          <button class="btn" onclick="savePrescription()"><i class="fas fa-save"></i> Save</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container1 {
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        /* margin: 50px; */
+      }
+
+      .main h3 {
+       
+        color: #8b56f6;
+        padding-left: 50px;
+        /* padding-bottom: 10px; */
+        font-weight: 600;
+      }
+
+      .row {
+        display: inline-flex;
+        gap: 70px;
+        justify-content: center;
+        margin-left: 30px;
+      }
+
+      .row1{
+        margin-left: -93px;
+      }
+      .row1,
+      input {
+        padding-left: 125px;
+        width: 65%;
+        gap: 20px;
+        /* margin-left: 30px; */
+
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ded2fa;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        background: #ded2fa;
+        border: 1.3px solid #8b56f6;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        border: 1px solid #8b56f6;
+        background: #8b56f6;
+        color: white;
+      }
+    </style>
+</body>
+
+</html>
