@@ -2,218 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Hospital Project</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="./assets/GrssLogo.png" rel="icon">
-    <!-- Font Awesome Cdn Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
- <!-- Bootstrap CSS -->
- <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" /> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
+    <link rel="stylesheet" href="login.css">
+    <link href="./assets/GrssLogo.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="sign-in-container">
+        <div class="sign-column s1">
 
-    <!-- ------------------------------Sidebar------------------------------------ -->
-
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="#" class="logo">
-                        <img src="./assets/stethoscope (1).png">
-                        <span class="nav-item">Reception</span>
-                    </a></li>
-                    <li onclick="loadContent('registration')" class="nav-item registration--item">
-                        <a href="#"><img src="./assets/medical-report.png" alt=""><span>Registration</span></a>
-                    </li>
-                    
-                    <li onclick="loadContent('billing')" id="click" class="nav-item billing--item">
-                        <a href="#"><img src="./assets/biling.png" alt=""><span>Billing</span></a>
-                    </li>
-                    
-               
-                <li onclick="loadContent('opd')" id="click" class=" nav-item">
-                    <a href="#">
-                        <img src="./assets/stethoscope (2).png" alt=""><span>OPD - Out Patient </span>
-                    </a>
-                </li>
-                <li onclick="f1('ipd--item')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/bed-icon.png" alt=""><span> IPD - In Patient </span></a>
-                </li>
-                <li onclick="f1('pharmacy--item')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/pills.png" alt=""><span>Pharmacy </span></a>
-                </li>
-                <li onclick="f1('pathology--item')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/microscope (2).png" alt=""><span>Pathology</span></a>
-                </li>
-                <li onclick="loadContent('hr')" id="click" class="nav-item hr--item">
-                    <a href="#"><img src="./assets/third-party.png" alt=""><span> Human Resource</span></a>
-                </li>
-                <li onclick="f1('radiology--item')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/ct-scan (2).png" alt=""><span> Radiology</span></a>
-                </li>
-                <li onclick="f1('appointment--item')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/appointment.png" alt=""><span>Appointment </span></a>
-                </li>
-                <li onclick="f1('')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/insurance (1).png" alt=""><span> TPA Management</span></a>
-                </li>
-                <li onclick="f1('')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/heart-rate.png" alt=""><span> Birth / Death </span></a>
-                </li>
-                <li onclick="f1('')" id="click" class=" nav-item">
-                    <a href="#"><img src="./assets/blood-type.png" alt=""><span> Blood Bank</span></a>
-                </li>
-            </ul>
-        </nav>
-        <!-- ------------------------------Sidebar End------------------------------------ -->
-
-        <!-- -------------------------------------------Navbar------------------------------------ -->
-        <div class="header--wrapper">
-            <div class="header--title">
-                <a href="index.html">
-                    <h2>Hospital Management System </h2>
-                </a>
+            <!-- toggle button  -->
+            <div class="tb" style="margin-right:0px ; ">
+                <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
             </div>
 
-            <div class="nav--item">
-                <div class="search--box">
-                
-                    <input type="text" placeholder="Search By Patient Name">
-                </div>
-                <ul class="bed" onclick="f1('notification--item')" id="click">
-                    <div class="bed"><img src="./assets/notification.png" alt=""></div>
-                </ul>
-                <ul class="bed" onclick="loadContent('beds')">
-                    <a href="#">
-                        <div class="bed"><img src="./assets/bed.png" alt=""> Bed Status</div>
-                    </a>
-                </ul>
-                <ul class="bed" onclick="toggleProfileVisibility()" id="click">
-                    <li class="bed-item" style="list-style: none;"><img src="./assets/profile.png" alt=""></li>
-                </ul>
-                
-                <div class="profile1" id="profile1" style="display: none;">
-                    <img src="./assets/profile.png" alt=""> 
-                    <div>User Name</div>
-                    <div id="username"><br></div>
-                    <button type="button" id="logoutBtn">Logout</button>
-                </div>
-                
-            </div>
+            <div class="sign-column-face s1">
+                <div class="s3">
+                    <div class="sign-header-section">
+                        <div class="sign-in-title">
+                            Welcome!
+                        </div>
+                        <div class="sign-in-title-alt">
+                            Enter your account credentials to sign in <br>
+                        </div>
+                    </div>
 
+                    <form class="input-container" id="loginForm">
+                        <input type="email" id="email" required placeholder="Email address">
+                        <input type="password" id="password" required placeholder="Password">
+                        <a href="#" class="alt-f">
+                            <!-- Forgot Password ? -->
+                        </a>
+                        <button type="submit" id="signInButton"> <!-- Changed button type to "submit" -->
+                            Sign in
+                        </button>
+                        <div href="#" class="alt-f-full">
+                            <a href="sign-up.html" class="alt-f">
+                                <!-- Sign Up -->
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
         </div>
 
+        <div class="sign-column s2">
+            <div class="sign-in-title">
+                TeknoWell Hospital......!
+            </div>
+            <div class="intro-p">
+                <div class="canvas-logo">
+                    <img src="../assets/loginLogo.png" alt="logo">
+                </div>
 
-        <!-- -------------------------------------------Navbar End ------------------------------------ -->
+                <div class="intro-content">
+                    <div class="intro-title">
 
+                    </div>
 
-        <!-- ------------------------------ ---------Main Section------------------------------------------ -->
-
-        <div class="main-container" id="mainContent">
-
+                </div>
+            </div>
         </div>
     </div>
+
+
     <script>
-        // Function to load dynamic content based on URL parameters or specific links
-        function loadContent(pageName) {
-            // Define the folder path
-            var folderPath = 'pages/';
-    
-            // Construct the full URL for the specified page
-            var url = folderPath + pageName + '.html';
-    
-            // Fetch the content from the constructed URL
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    // Insert the fetched HTML content into the mainContent div
-                    document.getElementById('mainContent').innerHTML = html;
-                })
-                .catch(error => console.error('Error loading content:', error));
-        }
-    
-        // Call loadContent function with default parameter 'beds' when the page loads
-        window.addEventListener('load', function () {
-            loadContent('beds');
+        document.getElementById("signInButton").addEventListener("click", function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Retrieve input values
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Predefined email and password
+            var predefinedEmail = "v@gmail.com";
+            var predefinedPassword = "Vaibhav@123";
+
+            // Check if entered email and password match predefined values
+            if (email === predefinedEmail && password === predefinedPassword) {
+                localStorage.setItem("login", JSON.stringify({ login: true }))
+                // Redirect to index.html using relative path
+                window.location.href = "pages/home.html";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
         });
     </script>
-    
 
-<!-- -----------------------------------Login Script----------------------------------- -->
-
-    <script>
-
-        const l = localStorage.getItem("login")
-        if (l == null)
-            location.replace("pages/login.html")
-        else {
-            const e = JSON.parse(l)
-            if (e.login == true) {
-                // location.replace("/assets/login.html")
+    <Script>
+        const toggle = document.getElementById("toggleDark");
+        const body = document.querySelector("body");
+        toggle.addEventListener("click", function () {
+            this.classList.toggle("bi-moon");
+            if (this.classList.toggle("bi-brightness-high-fill")) {
+                body.style.background = "white";
+                body.style.color = "black";
+                body.style.transition = "2s";
+            } else {
+                body.style.background = "black";
+                body.style.color = "white";
+                body.style.transition = "2s";
             }
-            else {
-                location.replace("/pages/login.html")
-            }
-
-        }
-
-    </script>
-
-<!-- -----------------------------------LOgin End----------------------------------- -->
-
-<!-- -----------------------------------Profile box Script----------------------------------- -->
-<script>
-    // Get the predefined email
-var predefinedEmail = "v@gmail.com";
-
-// Set the username to be the email address
-document.getElementById("username").innerText = predefinedEmail;
-
-// Logout functionality (if needed)
-document.getElementById("logoutBtn").addEventListener("click", function() {
-    // Implement your logout functionality here
-    alert("Logout clicked!");
-});
-
-</script>
-
-<script>
-function toggleProfileVisibility() {
-    var profileDiv = document.getElementById("profile1");
-
-    if (profileDiv.style.visibility === "visible") {
-        profileDiv.style.visibility = "hidden";
-    } else {
-        profileDiv.style.visibility = "visible";
-    }
-}
-
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var loginStatus = JSON.parse(localStorage.getItem("login"));
-    if (loginStatus && loginStatus.login === true) {
-        var profileDiv = document.getElementById("profile1");
-        profileDiv.style.display = "block";
-    }
-});
-
-document.getElementById("logoutBtn").addEventListener("click", function() {
-    // Clear login status from local storage
-    localStorage.removeItem("login");
-    // Redirect to login page
-    window.location.href = "../pages/login.html";
-});
-
-</script>
-
-
-<!-- -----------------------------------Profile box Script End ----------------------------------- -->
+        });
+    </Script>
 </body>
 
 </html>
