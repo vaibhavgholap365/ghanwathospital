@@ -96,7 +96,7 @@
             if (email === predefinedEmail && password === predefinedPassword) {
                 localStorage.setItem("login", JSON.stringify({ login: true }))
                 // Redirect to index.html using relative path
-                window.location.href = "Pages/home.html";
+                window.location.href = "./hospital/Pages/home.html";
             } else {
                 alert("Invalid email or password. Please try again.");
             }
